@@ -9,11 +9,11 @@ const StarSvg = () => (
 );
 
 const TelegramIcon = () => (
-  <span className="tg-ico" aria-hidden="true">
-    <svg viewBox="0 0 24 24" fill="#fff">
-      <path d="M21.8 4.3 2.9 11.6c-.9.4-.9 1.6.1 1.9l4.6 1.4 1.8 5.5c.3.8 1.2 1 1.8.4l2.6-2.3 4.6 3.4c.7.5 1.6.1 1.8-.7l3.3-15.6c.2-1-.7-1.7-1.5-1.3Z" />
-    </svg>
-  </span>
+  <img src="/icon-telegram.jpg" alt="" className="tg-ico-img" aria-hidden="true" />
+);
+
+const PhoneIcon = () => (
+  <img src="/icon-phone.jpg" alt="" className="tg-ico-img" aria-hidden="true" />
 );
 
 const bg = (url: string): React.CSSProperties => ({
@@ -91,14 +91,7 @@ export default function Home() {
                 <span>{t("hero.writeTelegram")}</span>
               </a>
               <a href="tel:+998781234567" className="btn btn-soft">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path
-                    d="M6.6 10.8a13 13 0 0 0 5.6 5.6l1.9-1.9c.3-.3.6-.3.9-.2 1 .3 2 .5 3.1.5.5 0 .9.4.9.9V19c0 .5-.4.9-.9.9A15.9 15.9 0 0 1 2.2 4c0-.5.4-.9.9-.9h3.2c.5 0 .9.4.9.9 0 1.1.2 2.1.5 3.1.1.3 0 .6-.2.9l-1.8 1.8Z"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <PhoneIcon />
                 <span>{t("hero.call")}</span>
               </a>
             </div>
@@ -257,16 +250,8 @@ export default function Home() {
             <article className="svc reveal">
               <div className="ph svc-media" style={bg(SERVICE_IMGS[0])}></div>
               <div className="svc-body">
-                <span className="ic">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M3 6h13v12H3z" stroke="currentColor" strokeWidth="1.8" />
-                    <path
-                      d="m16 10 5-3v10l-5-3"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                <span className="ic ic-img">
+                  <img src="/icon-chat.jpg" alt="" />
                 </span>
                 <h3>{t("services.online")}</h3>
                 <p>{t("services.onlineDesc")}</p>
@@ -288,21 +273,8 @@ export default function Home() {
             <article className="svc reveal" data-d="1">
               <div className="ph svc-media" style={bg(SERVICE_IMGS[1])}></div>
               <div className="svc-body">
-                <span className="ic">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M4 20V7l8-4 8 4v13"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M12 8v6m-3-3h6M3 20h18"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                    />
-                  </svg>
+                <span className="ic ic-img">
+                  <img src="/icon-handshake.jpg" alt="" />
                 </span>
                 <h3>{t("services.clinic")}</h3>
                 <p>{t("services.clinicDesc")}</p>
@@ -324,15 +296,8 @@ export default function Home() {
             <article className="svc reveal" data-d="2">
               <div className="ph svc-media" style={bg(SERVICE_IMGS[2])}></div>
               <div className="svc-body">
-                <span className="ic">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1v-8Z"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                <span className="ic ic-img">
+                  <img src="/icon-location.jpg" alt="" />
                 </span>
                 <h3>{t("services.home")}</h3>
                 <p>{t("services.homeDesc")}</p>
@@ -578,7 +543,7 @@ export default function Home() {
                     <b>Google Play</b>
                   </span>
                 </a>
-                <a href="#" className="store">
+                <a href="https://t.me/" className="store">
                   <TelegramIcon />
                   <span>
                     <small>{t("cta.message")}</small>

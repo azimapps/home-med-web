@@ -3,24 +3,6 @@
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n";
 
-const HeartMark = () => (
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path
-      d="M12 21s-7-4.35-7-9.5A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19 11.5C19 16.65 12 21 12 21Z"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M8.4 12h2l1-2 1.2 3 1-1h2"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
 export default function Footer() {
   const { t } = useI18n();
 
@@ -29,11 +11,8 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer-grid">
           <div>
-            <Link className="brand" href="/">
-              <span className="mark" aria-hidden="true">
-                <HeartMark />
-              </span>
-              HomeMed
+            <Link className="brand brand-logo-footer" href="/">
+              <img src="/logo-square.png" alt="HomeMed" />
             </Link>
             <p className="about">{t("footer.desc")}</p>
             <div className="foot-social">

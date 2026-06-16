@@ -12,13 +12,15 @@ if [[ -n "${CLOUDSDK_CONFIG:-}" ]]; then
 fi
 
 PROJECT="project-2bfaf81a-ba6b-4eae-9a2"
-VM="homemed"
+VM="azamsoft-staging"
 ZONE="europe-west1-b"
 GCLOUD_ACCOUNT=""
 
 REMOTE_DIR="${REMOTE_DIR:-/opt/homemed}"
-APP_PORT="${APP_PORT:-3000}"
+APP_PORT="${APP_PORT:-3100}"
 APP_NAME="homemed"
+DOMAINS="${DOMAINS:-home-med.uz www.home-med.uz}"
+CERT_EMAIL="${CERT_EMAIL:-only.udemy01@gmail.com}"
 
 if [[ -f "$CONFIG_FILE" ]]; then
   VM="$(sed -n 's/.*\*\*VM Name\*\*:[[:space:]]*//p;s/.*\*\*VM\*\*:[[:space:]]*//p' "$CONFIG_FILE" | head -n1 || true)"
@@ -93,11 +95,12 @@ pm2 startOrReload $REMOTE_DIR/ecosystem.config.js
 pm2 save
 sudo env PATH=\$PATH:/usr/bin pm2 startup systemd -u \$USER --hp /home/\$USER >/dev/null || true
 
-# --- nginx reverse proxy :80 -> :$APP_PORT (idempotent) ---
+# --- nginx vhost for $DOMAINS -> :$APP_PORT (idempotent, no default_server) ---
 sudo tee /etc/nginx/sites-available/$APP_NAME >/dev/null <<NGINX
 server {
-  listen 80 default_server;
-  server_name _;
+  listen 80;
+  listen [::]:80;
+  server_name $DOMAINS;
   client_max_body_size 10m;
 
   location / {
@@ -114,21 +117,29 @@ server {
 }
 NGINX
 sudo ln -sf /etc/nginx/sites-available/$APP_NAME /etc/nginx/sites-enabled/$APP_NAME
-sudo rm -f /etc/nginx/sites-enabled/default
 sudo nginx -t
 sudo systemctl reload nginx
+
+# --- TLS via Certbot (issue once, renews via cron) ---
+if ! command -v certbot >/dev/null; then
+  sudo apt-get install -y certbot python3-certbot-nginx
+fi
+DOMAIN_FLAGS=""
+for d in $DOMAINS; do DOMAIN_FLAGS="\$DOMAIN_FLAGS -d \$d"; done
+# --keep-until-expiring skips re-issuing a still-valid cert; safe to run every deploy.
+sudo certbot --nginx --non-interactive --agree-tos --email "$CERT_EMAIL" \\
+  --redirect --keep-until-expiring \$DOMAIN_FLAGS || true
 
 rm ~/homemed-dist.tar.gz
 EOF
 
-# --- firewall :80 (idempotent) ---
-if ! gcloud compute firewall-rules describe allow-http-$APP_NAME --project "$PROJECT" "${ACCOUNT_FLAGS[@]}" >/dev/null 2>&1; then
+# --- firewall :80/:443 (idempotent; VM presumed to already serve other vhosts) ---
+gcloud compute firewall-rules describe allow-http-$APP_NAME --project "$PROJECT" "${ACCOUNT_FLAGS[@]}" >/dev/null 2>&1 || \
   gcloud compute firewall-rules create allow-http-$APP_NAME \
     --project "$PROJECT" "${ACCOUNT_FLAGS[@]}" \
-    --network=default --action=ALLOW --rules=tcp:80 \
+    --network=default --action=ALLOW --rules=tcp:80,tcp:443 \
     --direction=INGRESS --source-ranges=0.0.0.0/0 \
     --target-tags=http-server >/dev/null
-fi
 gcloud compute instances add-tags "$VM" "${GCFLAGS[@]}" --tags=http-server >/dev/null 2>&1 || true
 
 rm -f /tmp/homemed-dist.tar.gz

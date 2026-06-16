@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: "HomeMed — Shifokor yoningizda. Har doim.",
   description:
     "Onlayn konsultatsiya, klinikada uchrashuv yoki uyga tashrif — siz uchun qulay usulni tanlang.",
-  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({

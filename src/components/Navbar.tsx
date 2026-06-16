@@ -5,24 +5,6 @@ import Link from "next/link";
 import { useI18n } from "@/lib/i18n";
 import type { Lang } from "@/lib/types";
 
-const HeartMark = () => (
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path
-      d="M12 21s-7-4.35-7-9.5A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19 11.5C19 16.65 12 21 12 21Z"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M8.4 12h2l1-2 1.2 3 1-1h2"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
 export default function Navbar() {
   const { lang, setLang, t } = useI18n();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -61,11 +43,8 @@ export default function Navbar() {
   return (
     <header className={`site-header${scrolled ? " scrolled" : ""}`}>
       <div className="wrap nav">
-        <Link className="brand" href="/" aria-label="HomeMed">
-          <span className="mark" aria-hidden="true">
-            <HeartMark />
-          </span>
-          HomeMed
+        <Link className="brand brand-logo" href="/" aria-label="HomeMed">
+          <img src="/logo.png" alt="HomeMed" />
         </Link>
 
         <nav className="nav-links" aria-label="Asosiy">

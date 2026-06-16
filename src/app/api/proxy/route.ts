@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const BASE_URL = "https://klinika-production.up.railway.app";
+const BASE_URL = "https://api.home-med.uz";
 
 export async function GET(request: NextRequest) {
   const path = request.nextUrl.searchParams.get("path");
