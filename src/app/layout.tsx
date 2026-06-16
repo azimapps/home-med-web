@@ -3,7 +3,7 @@ import "./globals.css";
 import ClientLayout from "@/components/ClientLayout";
 
 export const metadata: Metadata = {
-  title: "HomeMed - Shifokor yoningizda. Har doim.",
+  title: "HomeMed — Shifokor yoningizda. Har doim.",
   description:
     "Onlayn konsultatsiya, klinikada uchrashuv yoki uyga tashrif — siz uchun qulay usulni tanlang.",
   icons: { icon: "/favicon.ico" },
@@ -16,7 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uz">
-      <body className="font-sans antialiased">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.classList.add('js');`,
+          }}
+        />
+      </head>
+      <body>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

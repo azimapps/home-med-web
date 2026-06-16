@@ -13,59 +13,222 @@ const translations: Record<string, Record<Lang, string>> = {
   "nav.clinics": { uz: "Klinikalar", ru: "Клиники", en: "Clinics" },
   "nav.reviews": { uz: "Izohlar", ru: "Отзывы", en: "Reviews" },
   "nav.founder": { uz: "Asoschi", ru: "Основатель", en: "Founder" },
-  "nav.tips": { uz: "Kunlik tavsiyalar", ru: "Ежедневные советы", en: "Daily tips" },
+  "nav.tips": { uz: "Tavsiyalar", ru: "Советы", en: "Tips" },
   "nav.contact": { uz: "Kontakt", ru: "Контакт", en: "Contact" },
   "nav.telegram": { uz: "Telegram'da yozish", ru: "Написать в Telegram", en: "Write on Telegram" },
   "nav.openApp": { uz: "Ilovada ochish", ru: "Открыть в приложении", en: "Open in app" },
 
   // Hero
-  "hero.title1": { uz: "Shifokor yoningizda.", ru: "Врач рядом с вами.", en: "Doctor by your side." },
+  "hero.pill": {
+    uz: "Onlayn va uyga tashrif",
+    ru: "Онлайн и на дом",
+    en: "Online & home visits",
+  },
+  "hero.title1": { uz: "Shifokor yoningizda.", ru: "Врач рядом с вами.", en: "A doctor by your side." },
   "hero.title2": { uz: "Har doim.", ru: "Всегда.", en: "Always." },
   "hero.subtitle": {
     uz: "Onlayn konsultatsiya, klinikada uchrashuv yoki uyga tashrif — siz uchun qulay usulni tanlang.",
     ru: "Онлайн консультация, встреча в клинике или визит на дом — выберите удобный способ.",
-    en: "Online consultation, clinic visit or home visit — choose the convenient way for you.",
+    en: "Online consultation, a clinic appointment, or a home visit — choose the way that works for you.",
   },
-  "hero.applyApp": { uz: "Ilovada ariza yuborish", ru: "Подать заявку в приложении", en: "Apply in app" },
-  "hero.writeTelegram": { uz: "Telegram'da yozish", ru: "Написать в Telegram", en: "Write on Telegram" },
-  "hero.call": { uz: "Qo'ng'iroq qilish", ru: "Позвонить", en: "Call" },
+  "hero.applyApp": { uz: "Ilovada ariza yuborish", ru: "Подать заявку в приложении", en: "Send a request in the app" },
+  "hero.writeTelegram": { uz: "Telegram'da yozish", ru: "Написать в Telegram", en: "Message on Telegram" },
+  "hero.call": { uz: "Qo'ng'iroq qilish", ru: "Позвонить", en: "Call us" },
   "hero.verifiedDoctors": { uz: "Tekshirilgan shifokorlar", ru: "Проверенные врачи", en: "Verified doctors" },
-  "hero.safePrivate": { uz: "Xavfsiz va maxfiy", ru: "Безопасно и конфиденциально", en: "Safe and private" },
+  "hero.safePrivate": { uz: "Xavfsiz va maxfiy", ru: "Безопасно и конфиденциально", en: "Safe & confidential" },
+  "hero.cardOnline": { uz: "Onlayn qabul", ru: "Онлайн приём", en: "Online visit" },
+  "hero.cardOnlineSub": { uz: "5 daqiqada ulanish", ru: "Подключение за 5 мин", en: "Connect in 5 min" },
+  "hero.cardDoctors": { uz: "faol shifokorlar", ru: "активных врачей", en: "active doctors" },
+
+  // Stats
+  "stats.doctors": { uz: "Tekshirilgan shifokorlar", ru: "Проверенные врачи", en: "Verified doctors" },
+  "stats.consults": { uz: "O'tkazilgan konsultatsiya", ru: "Проведённые консультации", en: "Consultations completed" },
+  "stats.cities": { uz: "O'zbekiston shaharlari", ru: "Города Узбекистана", en: "Cities in Uzbekistan" },
+  "stats.rating": { uz: "App Store reytingi", ru: "Рейтинг в App Store", en: "App Store rating" },
 
   // How it works
-  "howItWorks.title": { uz: "Qanday ishlaydi?", ru: "Как это работает?", en: "How does it work?" },
+  "howItWorks.eyebrow": { uz: "Qanday ishlaydi", ru: "Как это работает", en: "How it works" },
+  "howItWorks.title": {
+    uz: "Uch qadamda shifokor yoningizda",
+    ru: "Врач рядом за три шага",
+    en: "A doctor by your side in three steps",
+  },
   "howItWorks.subtitle": {
-    uz: "Uch oddiy qadamda tibbiy yordam oling",
-    ru: "Получите медицинскую помощь в три простых шага",
-    en: "Get medical help in three simple steps",
+    uz: "Ariza qoldiring, mutaxassisni tanlang va sizga qulay formatda yordam oling.",
+    ru: "Оставьте заявку, выберите специалиста и получите помощь в удобном формате.",
+    en: "Leave a request, pick a specialist and get care in the format that suits you.",
   },
-  "howItWorks.step1.title": { uz: "Ariza yuborish", ru: "Подать заявку", en: "Submit request" },
+  "howItWorks.step1.title": { uz: "Ariza qoldiring", ru: "Оставьте заявку", en: "Leave a request" },
   "howItWorks.step1.desc": {
-    uz: "Ilovada arizangizni to'ldiring va shifokorni tanlang",
-    ru: "Заполните заявку в приложении и выберите врача",
-    en: "Fill out the application and choose a doctor",
+    uz: "Ilova, Telegram yoki qo'ng'iroq orqali — bir daqiqada murojaat qiling.",
+    ru: "Через приложение, Telegram или звонок — обращайтесь за минуту.",
+    en: "Via the app, Telegram or a phone call — reach out in under a minute.",
   },
-  "howItWorks.step2.title": { uz: "Xizmat turini tanlash", ru: "Выбрать тип услуги", en: "Choose service type" },
+  "howItWorks.step2.title": { uz: "Mutaxassisni tanlang", ru: "Выберите специалиста", en: "Choose a specialist" },
   "howItWorks.step2.desc": {
-    uz: "Onlayn, klinikada yoki uyga tashrif — sizga qulayi",
-    ru: "Онлайн, в клинике или на дом — как вам удобно",
-    en: "Online, at clinic or home visit — your convenience",
+    uz: "Shifokor yo'nalishi va sizga qulay vaqtni tanlang — biz mosini topamiz.",
+    ru: "Выберите специальность и удобное время — мы подберём подходящего врача.",
+    en: "Pick a specialty and a time that suits you — we match the right doctor.",
   },
-  "howItWorks.step3.title": { uz: "Tibbiy yordam", ru: "Медицинская помощь", en: "Medical care" },
+  "howItWorks.step3.title": { uz: "Maslahat oling", ru: "Получите помощь", en: "Get care" },
   "howItWorks.step3.desc": {
-    uz: "Professional shifokor bilan konsultatsiya va davolash",
-    ru: "Консультация и лечение с профессиональным врачом",
-    en: "Consultation and treatment with a professional doctor",
+    uz: "Onlayn, klinikada yoki uyingizda — sizga ma'qul formatda qabulga chiqing.",
+    ru: "Онлайн, в клинике или дома — в удобном для вас формате.",
+    en: "Online, at the clinic or at home — meet in the format you prefer.",
+  },
+  "howItWorks.step4.title": { uz: "Kuzatuvda qoling", ru: "Оставайтесь на связи", en: "Stay in follow-up" },
+  "howItWorks.step4.desc": {
+    uz: "Tavsiyalar, retseptlar va keyingi qadamlar — barchasi ilovangizda saqlanadi.",
+    ru: "Рекомендации, рецепты и следующие шаги — всё в вашем приложении.",
+    en: "Recommendations, prescriptions and next steps — all saved in your app.",
   },
 
   // Services
-  "services.title": { uz: "Xizmatlar", ru: "Услуги", en: "Services" },
+  "services.eyebrow": { uz: "Xizmatlar", ru: "Услуги", en: "Services" },
+  "services.title": {
+    uz: "Sizga qulay tibbiy yordam formati",
+    ru: "Медицинская помощь в удобном для вас формате",
+    en: "Care in the format that suits you",
+  },
   "services.subtitle": {
-    uz: "Sizga qulay usulda tibbiy yordam oling",
-    ru: "Получите медицинскую помощь удобным способом",
-    en: "Get medical help in a convenient way",
+    uz: "Bir ilovada uchta yo'nalish — har biri tekshirilgan shifokorlar bilan.",
+    ru: "Три формата в одном приложении — каждый с проверенными врачами.",
+    en: "Three formats in one app — each with verified doctors.",
   },
   "services.applyBtn": { uz: "Ilovada ariza qoldirish", ru: "Оставить заявку", en: "Submit request" },
+  "services.learnMore": { uz: "Batafsil", ru: "Подробнее", en: "Learn more" },
+  "services.online": { uz: "Onlayn konsultatsiya", ru: "Онлайн консультация", en: "Online consultation" },
+  "services.onlineDesc": {
+    uz: "Uydan chiqmasdan video yoki chat orqali shifokor bilan bog'laning. O'rtacha kutish — 5 daqiqa.",
+    ru: "Свяжитесь с врачом по видео или чату, не выходя из дома. Среднее ожидание — 5 минут.",
+    en: "Connect with a doctor by video or chat without leaving home. Average wait — 5 minutes.",
+  },
+  "services.clinic": { uz: "Klinikada qabul", ru: "Приём в клинике", en: "Clinic appointment" },
+  "services.clinicDesc": {
+    uz: "Hamkor klinikalardan birida qulay vaqtga yoziling — navbatsiz va shaffof narxlarda.",
+    ru: "Запишитесь в одну из партнёрских клиник на удобное время — без очередей и прозрачные цены.",
+    en: "Book a convenient time at a partner clinic — no queues, transparent pricing.",
+  },
+  "services.home": { uz: "Uyga shifokor", ru: "Врач на дом", en: "Doctor at home" },
+  "services.homeDesc": {
+    uz: "Shifokor yoki hamshira uyingizga keladi — tahlillar, ukol va kuzatuv ham bir joyda.",
+    ru: "Врач или медсестра приедут к вам домой — анализы, уколы и наблюдение в одном месте.",
+    en: "A doctor or nurse comes to you — tests, injections and follow-up in one place.",
+  },
+
+  // Specialists
+  "specialists.eyebrow": { uz: "Mutaxassislar", ru: "Специалисты", en: "Specialists" },
+  "specialists.title": {
+    uz: "Tekshirilgan shifokorlar jamoasi",
+    ru: "Команда проверенных врачей",
+    en: "A team of verified doctors",
+  },
+  "specialists.subtitle": {
+    uz: "Har bir mutaxassis diplom va tajriba bo'yicha tekshiruvdan o'tadi.",
+    ru: "Каждый специалист проходит проверку дипломов и опыта.",
+    en: "Every specialist is vetted for credentials and experience.",
+  },
+  "specialists.therapist": { uz: "Terapevt", ru: "Терапевт", en: "Therapist" },
+  "specialists.pediatrician": { uz: "Pediatr", ru: "Педиатр", en: "Pediatrician" },
+  "specialists.cardiologist": { uz: "Kardiolog", ru: "Кардиолог", en: "Cardiologist" },
+  "specialists.neurologist": { uz: "Nevrolog", ru: "Невролог", en: "Neurologist" },
+  "specialists.yearsExp": { uz: "yil tajriba", ru: "лет опыта", en: "yrs exp." },
+
+  // Clinics section (homepage)
+  "clinicsHome.eyebrow": { uz: "Klinikalar", ru: "Клиники", en: "Clinics" },
+  "clinicsHome.title": {
+    uz: "Ishonchli hamkor klinikalar",
+    ru: "Надёжные партнёрские клиники",
+    en: "Trusted partner clinics",
+  },
+  "clinicsHome.subtitle": {
+    uz: "O'zbekiston bo'ylab tekshirilgan klinikalar tarmog'i bilan ishlaymiz.",
+    ru: "Мы работаем с проверенной сетью клиник по всему Узбекистану.",
+    en: "We work with a vetted network of clinics across Uzbekistan.",
+  },
+  "cities.tashkent": { uz: "Toshkent", ru: "Ташкент", en: "Tashkent" },
+  "cities.samarkand": { uz: "Samarqand", ru: "Самарканд", en: "Samarkand" },
+  "cities.bukhara": { uz: "Buxoro", ru: "Бухара", en: "Bukhara" },
+  "cities.andijan": { uz: "Andijon", ru: "Андижан", en: "Andijan" },
+
+  // Reviews
+  "reviewsHome.eyebrow": { uz: "Izohlar", ru: "Отзывы", en: "Reviews" },
+  "reviewsHome.title": { uz: "Bemorlar nima deydi", ru: "Что говорят пациенты", en: "What patients say" },
+  "reviewsHome.subtitle": {
+    uz: "Minglab oilalar HomeMed orqali shifokor bilan bog'lanmoqda.",
+    ru: "Тысячи семей связываются с врачами через HomeMed.",
+    en: "Thousands of families connect with a doctor through HomeMed.",
+  },
+  "reviewsHome.r1": {
+    uz: "“Tunda bolamning harorati ko'tarildi. 10 daqiqada pediatr bilan video qabulga chiqdik va aniq tavsiya oldik. Juda qulay!”",
+    ru: "«Ночью у ребёнка поднялась температура. За 10 минут вышли на видеоприём с педиатром и получили чёткие рекомендации. Очень удобно!»",
+    en: "“My child had a fever at night. Within 10 minutes we were on a video visit with a pediatrician and got clear advice. So convenient!”",
+  },
+  "reviewsHome.r2": {
+    uz: "“Buvimga uyga shifokor chaqirdik. Hamshira tahlillarni uydan oldi, natijalar ilovaga keldi. Oilaviy do'ktor kabi.”",
+    ru: "«Вызвали врача на дом бабушке. Медсестра взяла анализы дома, результаты пришли в приложение. Как семейный врач.»",
+    en: "“We called a doctor home for my grandmother. The nurse took tests at home and results arrived in the app. Like a family doctor.”",
+  },
+  "reviewsHome.r3": {
+    uz: "“Klinikaga navbatsiz yozildim, hamma narsa ilovada. Vrach tavsiyalari va retsept ham shu yerda saqlanadi.”",
+    ru: "«Записалась в клинику без очереди, всё в приложении. Рекомендации врача и рецепт тоже сохраняются здесь.»",
+    en: "“Booked a clinic with no queue, everything in the app. The doctor's notes and prescription are saved right there too.”",
+  },
+
+  // Founder (homepage)
+  "founderHome.eyebrow": { uz: "Asoschi", ru: "Основатель", en: "Founder" },
+  "founderHome.quote": {
+    uz: "“Biz tibbiyotni har bir oila uchun yaqin, tushunarli va inson tomonida bo'lishini xohlaymiz — texnologiya buni faqat osonlashtiradi.”",
+    ru: "«Мы хотим, чтобы медицина была близкой, понятной и на стороне человека для каждой семьи — технологии лишь упрощают это.»",
+    en: "“We want medicine to feel close, understandable and on the human's side for every family — technology only makes that easier.”",
+  },
+  "founderHome.name": { uz: "Doniyor Safarov", ru: "Дониёр Сафаров", en: "Doniyor Safarov" },
+  "founderHome.position": {
+    uz: "Asoschi va bosh direktor, HomeMed",
+    ru: "Основатель и генеральный директор, HomeMed",
+    en: "Founder & CEO, HomeMed",
+  },
+
+  // Daily tips
+  "tipsHome.eyebrow": { uz: "Kunlik tavsiyalar", ru: "Ежедневные советы", en: "Daily tips" },
+  "tipsHome.title": { uz: "Sog'lik haqida sodda tilda", ru: "О здоровье простым языком", en: "Health, in plain language" },
+  "tipsHome.subtitle": {
+    uz: "Shifokorlarimizdan har kuni qisqa va foydali maslahatlar.",
+    ru: "Короткие и полезные советы от наших врачей каждый день.",
+    en: "Short, useful advice from our doctors every day.",
+  },
+  "tipsHome.cat1": { uz: "Immunitet", ru: "Иммунитет", en: "Immunity" },
+  "tipsHome.t1": {
+    uz: "Mavsumiy shamollashning oldini olishning 5 yo'li",
+    ru: "5 способов профилактики сезонной простуды",
+    en: "5 ways to prevent seasonal colds",
+  },
+  "tipsHome.cat2": { uz: "Bolalar salomatligi", ru: "Здоровье детей", en: "Child health" },
+  "tipsHome.t2": {
+    uz: "Bolada harorat: qachon shifokorga murojaat qilish kerak",
+    ru: "Температура у ребёнка: когда обращаться к врачу",
+    en: "Fever in children: when to call a doctor",
+  },
+  "tipsHome.cat3": { uz: "Yurak salomatligi", ru: "Здоровье сердца", en: "Heart health" },
+  "tipsHome.t3": {
+    uz: "Qon bosimini uyda to'g'ri o'lchashning oddiy qoidalari",
+    ru: "Простые правила измерения давления дома",
+    en: "Simple rules for measuring blood pressure at home",
+  },
+  "tipsHome.read5": { uz: "5 daqiqa o'qish", ru: "5 минут чтения", en: "5 min read" },
+  "tipsHome.read4": { uz: "4 daqiqa o'qish", ru: "4 минуты чтения", en: "4 min read" },
+  "tipsHome.read6": { uz: "6 daqiqa o'qish", ru: "6 минут чтения", en: "6 min read" },
+
+  // CTA
+  "cta.title": { uz: "Shifokor — bir tugma uzoqlikda", ru: "Врач — в одно касание", en: "A doctor is one tap away" },
+  "cta.subtitle": {
+    uz: "HomeMed ilovasini yuklab oling yoki Telegram orqali yozing. Birinchi konsultatsiya — bir necha daqiqada.",
+    ru: "Скачайте приложение HomeMed или напишите в Telegram. Первая консультация — за несколько минут.",
+    en: "Download the HomeMed app or message us on Telegram. Your first consultation — in just a few minutes.",
+  },
+  "cta.download": { uz: "Yuklab oling", ru: "Скачать", en: "Download on the" },
+  "cta.getOn": { uz: "Mavjud", ru: "Доступно в", en: "Get it on" },
+  "cta.message": { uz: "Yozing", ru: "Написать в", en: "Message on" },
 
   // Trust
   "trust.title": { uz: "Xavfsizlik va ishonch", ru: "Безопасность и доверие", en: "Safety and trust" },
@@ -212,6 +375,14 @@ const translations: Record<string, Record<Lang, string>> = {
     ru: "© 2026 HomeMed.uz. Все права защищены.",
     en: "© 2026 HomeMed.uz. All rights reserved.",
   },
+  "footer.rights": {
+    uz: "Barcha huquqlar himoyalangan.",
+    ru: "Все права защищены.",
+    en: "All rights reserved.",
+  },
+  "footer.company": { uz: "Kompaniya", ru: "Компания", en: "Company" },
+  "footer.partnerClinics": { uz: "Hamkor klinikalar", ru: "Партнёрские клиники", en: "Partner clinics" },
+  "footer.cityCountry": { uz: "Toshkent, O'zbekiston", ru: "Ташкент, Узбекистан", en: "Tashkent, Uzbekistan" },
 
   // Language names
   "lang.uz": { uz: "O'zbek", ru: "Узбекский", en: "Uzbek" },

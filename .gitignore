@@ -33,6 +33,15 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# local gcloud state used by deploy.sh
+/.gcloud/
+
+# never commit credential files
+/credentials/
+
+# Claude Code session data
+/.claude/
+
 # vercel
 .vercel
 
