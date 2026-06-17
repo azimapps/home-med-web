@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n";
+import MobileHome from "@/components/MobileHome";
 
 const StarSvg = () => (
   <svg viewBox="0 0 24 24" fill="currentColor">
@@ -54,6 +55,8 @@ export default function Home() {
 
   return (
     <>
+      <MobileHome />
+      <div className="d-home">
       {/* HERO */}
       <section className="hero">
         <div className="wrap hero-grid">
@@ -558,6 +561,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </div>
     </>
   );
 }

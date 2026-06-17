@@ -32,6 +32,7 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "Online consultation, a clinic appointment, or a home visit — choose the way that works for you.",
   },
   "hero.applyApp": { uz: "Ilovada ariza yuborish", ru: "Подать заявку в приложении", en: "Send a request in the app" },
+  "actionbar.send": { uz: "Ariza yuborish", ru: "Отправить", en: "Send a request" },
   "hero.writeTelegram": { uz: "Telegram'da yozish", ru: "Написать в Telegram", en: "Message on Telegram" },
   "hero.call": { uz: "Qo'ng'iroq qilish", ru: "Позвонить", en: "Call us" },
   "hero.verifiedDoctors": { uz: "Tekshirilgan shifokorlar", ru: "Проверенные врачи", en: "Verified doctors" },
