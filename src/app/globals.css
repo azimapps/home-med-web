@@ -1028,9 +1028,10 @@ section { position: relative; }
   background: var(--grad-soft);
 }
 .m-home .avatars .av:first-child { margin-left: 0; }
-.m-home .hero-cta { display: flex; flex-direction: column; gap: 10px; }
-.m-home .hero-cta .row { display: flex; gap: 10px; }
-.m-home .hero-cta .row .btn { flex: 1; }
+.m-home .hero-cta { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.m-home .hero-cta > .btn { width: 100%; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.m-home .hero-cta .row { display: flex; gap: 10px; min-width: 0; }
+.m-home .hero-cta .row .btn { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 
 /* stats strip */
 .m-home .m-stats {

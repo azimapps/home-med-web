@@ -326,7 +326,7 @@ export default function MobileHome() {
 
         <div className="hero-cta" data-reveal data-d="2">
           <a href="#kontakt" className="btn btn-primary">
-            {t("hero.applyApp")}
+            {t("actionbar.send")}
           </a>
           <div className="row">
             <a href="#kontakt" className="btn btn-ghost">
