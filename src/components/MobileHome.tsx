@@ -328,16 +328,6 @@ export default function MobileHome() {
           <a href="#kontakt" className="btn btn-primary">
             {t("actionbar.send")}
           </a>
-          <div className="row">
-            <a href="#kontakt" className="btn btn-ghost">
-              <img src="/icon-telegram.jpg" alt="" className="tg-ico-img" />
-              <span>Telegram</span>
-            </a>
-            <a href="tel:+998781234567" className="btn btn-ghost">
-              <img src="/icon-phone.jpg" alt="" className="tg-ico-img" />
-              <span>{t("hero.call")}</span>
-            </a>
-          </div>
         </div>
       </section>
 
